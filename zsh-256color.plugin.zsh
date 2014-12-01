@@ -17,4 +17,4 @@ _zsh_terminal_set_256color()
 }
 
 _zsh_terminal_set_256color
-unfunction _zsh_terminal_set_256color
+unset -f _zsh_terminal_set_256color

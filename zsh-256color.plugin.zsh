@@ -13,6 +13,9 @@ _zsh_terminal_set_256color()
 				export TERM="${TERM}-256color"
 			fi
 		;;
+    darwin*)
+      export TERM="${TERM}-256color";
+    ;;
 		*)
 			for terminfos in "${HOME}/.terminfo" "/etc/terminfo" "/lib/terminfo" "/usr/share/terminfo" ; do
 				if [[ -e "$terminfos"/$TERM[1]/${TERM}-256color || \

@@ -1,4 +1,4 @@
-# Copyright (c) 2014, Christian Ludwig
+# Copyright (c) 2014-2019, Christian Ludwig
 #
 # Set 256color terminal mode if available.
 

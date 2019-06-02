@@ -19,7 +19,7 @@ _zsh_terminal_set_256color()
 
 	# Use (n-)curses binaries, if installed.
 	if [[ -x "$( which toe )" ]] ; then
-		if toe -a | egrep -q "^$TERM256" ; then
+		if toe -a | egrep "^$TERM256" >/dev/null ; then
 			_zsh_256color_debug "Found $TERM256 from (n-)curses binaries."
 			export TERM="$TERM256"
 			return

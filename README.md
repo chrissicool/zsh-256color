@@ -30,6 +30,14 @@ If you're using [Zgen](https://github.com/tarjoilija/zgen), add
 
 to your `.zshrc` with your other zgen plugin load commands.
 
+### Zplugin
+
+If you're using [Zplugin](https://github.com/zdharma/zplugin), add
+
+`zplugin light "chrissicool/zsh-256color"`
+
+to your `.zshrc` with your other zplugin load commands.
+
 ## Debugging
 
 If the environment variable `$ZSH_256COLOR_DEBUG` is set to any value when the

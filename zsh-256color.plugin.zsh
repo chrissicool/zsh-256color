@@ -19,7 +19,7 @@ _zsh_terminal_set_256color()
 
 	# Use (n-)curses binaries, if installed.
 	if [[ -x "$( which toe )" ]] ; then
-		if toe -a | grep -e "^$TERM256" >/dev/null ; then
+		if toe -a | grep -E "^$TERM256" >/dev/null ; then
 			_zsh_256color_debug "Found $TERM256 from (n-)curses binaries."
 			export TERM="$TERM256"
 			return
@@ -28,7 +28,7 @@ _zsh_terminal_set_256color()
 
 	# Search through termcap descriptions, if binaries are not installed.
 	for termcaps in $TERMCAP "$HOME/.termcap" "/etc/termcap" "/etc/termcap.small" ; do
-		if [[ -e "$termcaps" ]] && grep -e -q "(^$TERM256|\|$TERM256)\|" "$termcaps" ; then
+		if [[ -e "$termcaps" ]] && grep -E -q "(^$TERM256|\|$TERM256)\|" "$termcaps" ; then
 			_zsh_256color_debug "Found $TERM256 from $termcaps."
 			export TERM="$TERM256"
 			return
